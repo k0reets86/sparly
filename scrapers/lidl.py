@@ -7,6 +7,7 @@ consistent dictionary format used by the Sparly application.
 from __future__ import annotations
 
 from typing import Any, Dict, List
+from bot.utils.sample_data import get_discounts
 
 
 async def fetch_discounts() -> List[Dict[str, Any]]:
@@ -25,7 +26,9 @@ async def fetch_discounts() -> List[Dict[str, Any]]:
             - valid_until
     """
     # TODO: Implement scraping from Lidl website and Lidl Plus API.
-    # This may involve parsing HTML pages and JSON responses. Use aiohttp or
-    # httpx for asynchronous HTTP requests and BeautifulSoup or similar
-    # libraries for HTML parsing.
-    return []
+       # Fetch sample discounts and filter by chain
+    discounts = get_discounts()
+    return [
+        d for d in discounts
+        if d.get("chain", "").lower() == "lidl"
+    ]
