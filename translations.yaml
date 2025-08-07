@@ -1,0 +1,40 @@
+# Translation strings for Sparly bot
+# Each key contains translations for supported languages: uk (Ukrainian), ru (Russian), de (German)
+
+start:
+  welcome:
+    uk: "Вас вітає Sparly!"
+    ru: "Добро пожаловать в Sparly!"
+    de: "Willkommen bei Sparly!"
+  choose_language:
+    uk: "Оберіть мову:"
+    ru: "Выберите язык:"
+    de: "Wählen Sie eine Sprache:"
+  ask_location:
+    uk: "Надішліть геолокацію або введіть ваш PLZ (5 цифр)."
+    ru: "Отправьте геолокацию или введите ваш PLZ (5 цифр)."
+    de: "Bitte sende deinen Standort oder gib deine Postleitzahl (5 Ziffern) ein."
+
+prefs:
+  title:
+    uk: "Налаштування"
+    ru: "Настройки"
+    de: "Einstellungen"
+  radius_prompt:
+    uk: "Виберіть радіус пошуку (км):"
+    ru: "Выберите радиус поиска (км):"
+    de: "Wähle den Suchradius (km):"
+  categories_prompt:
+    uk: "Виберіть категорії товарів:"
+    ru: "Выберите категории товаров:"
+    de: "Wähle Warengruppen:"
+
+basket:
+  enter_items:
+    uk: "Введіть список товарів через кому:"
+    ru: "Введите список товаров через запятую:"
+    de: "Gib die Liste der Artikel (mit Komma getrennt) ein:"
+  no_results:
+    uk: "Не вдалося знайти товари у заданому радіусі. Збільште радіус або змініть список."
+    ru: "Не удалось найти товары в заданном радиусе. Увеличьте радиус или измените список."
+    de: "Es wurden keine Artikel im angegebenen Radius gefunden. Erhöhen Sie den Radius oder passen Sie die Liste an."
