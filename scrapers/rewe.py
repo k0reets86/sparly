@@ -7,6 +7,7 @@ used across the Sparly application.
 from __future__ import annotations
 
 from typing import Any, Dict, List
+from bot.utils.sample_data import get_discounts
 
 
 async def fetch_discounts() -> List[Dict[str, Any]]:
@@ -25,7 +26,9 @@ async def fetch_discounts() -> List[Dict[str, Any]]:
             - price_old: original price before discount (optional)
             - valid_until: expiration date of the discount
     """
-    # TODO: Implement data fetching from REWE's REST endpoints
-    # You may need to use aiohttp or httpx for asynchronous HTTP requests.
-    # For now we return an empty list as a placeholder.
-    return []
+       # Fetch sample discounts and filter by chain
+    discounts = get_discounts()
+    return [
+        d for d in discounts
+        if d.get("chain", "").lower() == "rewe"
+    ]
